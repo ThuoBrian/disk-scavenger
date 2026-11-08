@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-labelledby="title">
+  <title id="title">disk-scavenger logo: a disk platter with a slice lifted out</title>
+  <defs>
+    <linearGradient id="tile" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1E2228"/>
+      <stop offset="1" stop-color="#121418"/>
+    </linearGradient>
+    <linearGradient id="platter" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3A414B"/>
+      <stop offset="1" stop-color="#262B32"/>
+    </linearGradient>
+    <linearGradient id="slice" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#3BA7B7"/>
+      <stop offset="1" stop-color="#4CC38A"/>
+    </linearGradient>
+    <!-- Platter with a 60° wedge missing (center 58,70, radius 38) -->
+    <clipPath id="platterShape">
+      <path d="M58 70 L90.91 51 A38 38 0 1 1 58 32 Z"/>
+    </clipPath>
+    <!-- The same wedge, lifted up and to the right by 9px -->
+    <clipPath id="sliceShape">
+      <path d="M67 61 L67 23 A38 38 0 0 1 99.91 42 Z"/>
+    </clipPath>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="127" height="127" rx="28" fill="url(#tile)" stroke="#2E343C"/>
+
+  <!-- Artwork, shifted to sit centered in the tile -->
+  <g transform="translate(1 -3)">
+
+  <!-- Platter -->
+  <path d="M58 70 L90.91 51 A38 38 0 1 1 58 32 Z" fill="url(#platter)"/>
+  <g clip-path="url(#platterShape)" fill="none" stroke="#3BA7B7" stroke-opacity="0.35" stroke-width="1.5">
+    <circle cx="58" cy="70" r="30"/>
+    <circle cx="58" cy="70" r="21"/>
+    <circle cx="58" cy="70" r="13"/>
+  </g>
+  <circle cx="58" cy="70" r="6" fill="#121418" stroke="#3BA7B7" stroke-width="2"/>
+
+  <!-- The reclaimed slice -->
+  <path d="M67 61 L67 23 A38 38 0 0 1 99.91 42 Z" fill="url(#slice)"/>
+  <g clip-path="url(#sliceShape)" fill="none" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1.5">
+    <circle cx="67" cy="61" r="30"/>
+    <circle cx="67" cy="61" r="21"/>
+  </g>
+
+  <!-- Sparkles: freed space -->
+  <path d="M110 30 Q110 36 116 36 Q110 36 110 42 Q110 36 104 36 Q110 36 110 30 Z" fill="#E3A73A"/>
+  <path d="M94 14 Q94 18 98 18 Q94 18 94 22 Q94 18 90 18 Q94 18 94 14 Z" fill="#E3A73A" fill-opacity="0.8"/>
+  </g>
+</svg>
